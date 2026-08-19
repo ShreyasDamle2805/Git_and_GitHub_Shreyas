@@ -60,5 +60,39 @@ def get_api_data():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo_item():
+    item_name = request.form.get('itemName')
+    item_description = request.form.get('itemDescription')
+
+    if not item_name or not item_description:
+        return jsonify({
+            "status": "error",
+            "message": "itemName and itemDescription are required"
+        }), 400
+
+    try:
+        todo_collection = db["todo_items"]
+
+        document = {
+            "itemName": item_name,
+            "itemDescription": item_description
+        }
+
+        result = todo_collection.insert_one(document)
+
+        return jsonify({
+            "status": "success",
+            "message": "To-Do item submitted successfully",
+            "itemId": str(result.inserted_id)
+        }), 201
+
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "message": str(e)
+        }), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True)
