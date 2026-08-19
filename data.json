@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Flask Backend Setup",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "MongoDB Atlas Integration",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "title": "DevOps Package Submission",
+    "status": "Pending"
+  }
+]
