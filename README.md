@@ -1,20 +1,46 @@
-# Flask & MongoDB Integration
+# Git and GitHub DevOps Assignment
 
-This is a Flask web application that stores user submissions in MongoDB Atlas and serves a JSON API endpoint.
+This project was created for practicing Git, GitHub, Flask and MongoDB.
 
-## Features
-- `/` - HTML form for user input
-- `/success` - Confirmation page after database submission
-- `/api` - Returns records from `data.json`
-- `/health` - Health check route for container/monitoring status
+## Technologies Used
 
-## Prerequisites
-- Python 3.x
-- Docker & Docker Compose (optional for container run)
+- Git
+- GitHub
+- Python
+- Flask
+- MongoDB
+- HTML
 
-## Local Setup
+## Project Features
 
-1. Clone the repo:
-   ```bash
-   git clone [https://github.com/ShreyasDamle2805/Flask_and_MongoDB_Shreyas.git](https://github.com/ShreyasDamle2805/Flask_and_MongoDB_Shreyas.git)
-   cd Flask_and_MongoDB_Shreyas
+- Flask user form
+- MongoDB data storage
+- JSON API using `/api`
+- To-Do form
+- `/submittodoitem` POST API
+- Git branching and merging
+- Merge conflict resolution
+- Git reset
+- Git rebase
+
+## How to Run
+
+Install the required packages:
+
+    pip install -r requirements.txt
+
+Create a `.env` file and add the MongoDB connection string:
+
+    MONGO_URI=your_mongodb_connection_string
+
+Run the application:
+
+    python app.py
+
+The application runs at:
+
+    http://127.0.0.1:5000
+
+## GitHub Repository
+
+https://github.com/ShreyasDamle2805/Git_and_GitHub_Shreyas
